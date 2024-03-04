@@ -20,7 +20,7 @@ import warnings
 import requests 
 
 warnings.filterwarnings("ignore")
-os.environ["OPEN_API_KEY"] = "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" 
+os.environ["OPEN_API_KEY"] = "your_api_key" 
 
 def rag_setup():
         # app = Flask(__name__)
@@ -67,7 +67,7 @@ def rag_setup():
 
         # Create the vector database, for quicker retrieval
         vectorstore = Weaviate.from_documents(client = client, documents = chunks,
-            embedding = OpenAIEmbeddings(openai_api_key="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"),by_text = False)
+            embedding = OpenAIEmbeddings(openai_api_key="your_api_key"),by_text = False)
 
         retriever = vectorstore.as_retriever()
 
@@ -85,7 +85,7 @@ def rag_setup():
         prompt = ChatPromptTemplate.from_template(template)
 
         # Call GPT3.5 for each user query
-        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key="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")
+        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key="your_api_key")
 
         rag_chain = (
             {"context": retriever,  "question": RunnablePassthrough()} 
