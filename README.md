@@ -2,11 +2,11 @@
 
 Given the PartsSelect website, build an agentic framework to support use queries related to refirgerators, dishwashers, and transactions. 
 
-#### Technology Used 
+### Technology Used 
 
 Retrieval Augmented Generation (RAG) --> Large Language Models are trained on vast amounts of data so that they can handle any question-answering tasks. RAG uses LLMs to handle question answering in a limited scope, by creating a knowledge base on a specific domain. Given limited code resources, my aim was to create a knowledge base of the most popular or frequently visited pages related to Refrigerators and dishwashers on this site. 
 
-#### WEB SCRAPING -- Scraper.ipynb
+### Web Scraping -- Scraper.ipynb
 (Packages: BeautifulSoup)
 
 This file is used to create CSV files of the popular fridge and dishwasher parts. This files includes 3 functions: 
@@ -30,11 +30,11 @@ Issues I faced:
     1. How do I feed in my knowledge base?
     2. Testing for spelling mistakes in the queries
 
-#### Setting up the Backend - backend.py
+### Setting up the Backend - backend.py
 
 This file contains the same code as customer_support_chatbot along with a Flask setup to connect to the frontend code (as provided by Instalily). The backend code invokes the RAG chain for every incoming query and returns an output based on context stored in the vector store. 
 
-#### Extensibility and Scalability
+### Extensibility and Scalability
 
 1. The Scraper can be used to frequently update and store popular appliances data - it is also easy to modify to add additional appliances. 
 2. The biggest part of scaling the backend is by increasing the context stored in the vector store. This can be achieved by adding more links to the WebBaseLoader.
