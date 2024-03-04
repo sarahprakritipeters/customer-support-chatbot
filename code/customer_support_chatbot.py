@@ -1,6 +1,6 @@
 # %%
 import os
-os.environ["OPEN_API_KEY"] = "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" 
+os.environ["OPEN_API_KEY"] = "your_api_key" 
 
 # %%
 import warnings
@@ -92,7 +92,7 @@ chunks = text_splitter.split_documents(all_data)
 
 # Create the vector database, for quicker retrieval
 vectorstore = Weaviate.from_documents(client = client, documents = chunks,
-    embedding = OpenAIEmbeddings(openai_api_key="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"),by_text = False)
+    embedding = OpenAIEmbeddings(openai_api_key="your_api_key"),by_text = False)
 
 retriever = vectorstore.as_retriever()
 
@@ -112,7 +112,7 @@ Answer:
 prompt = ChatPromptTemplate.from_template(template)
 
 # %%
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key="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")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key="your_api_key")
 
 rag_chain = (
     {"context": retriever,  "question": RunnablePassthrough()} 
