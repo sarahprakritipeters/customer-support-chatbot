@@ -1,6 +1,6 @@
 ### Customer Support Chatbot for PartsSelect website
 
-Given the PartsSelect website, build an agentic framework to support use queries related to refirgerators, dishwashers, and transactions. 
+Given the PartsSelect website, build an agentic framework to support use queries related to refrigerators, dishwashers, and transactions. 
 
 ### Technology Used 
 
