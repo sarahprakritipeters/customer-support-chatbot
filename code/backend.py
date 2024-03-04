@@ -76,7 +76,8 @@ def rag_setup():
         Use the following pieces of retrieved context to answer the question. 
         If there are any questions outside the scope of refrigerators, dishwashers, payments and returns, then please return an answer that says you cannot help with this query.
         If there is a question related to where to buy the entire refrigerator or dishwasher, then please mention that this website is primarily used for parts replacements
-        If there is a question about return policies, please reroute them to the returns webpage - https://www.partselect.com/365-Day-Returns.htm
+        If there is a question about return policies, please reroute them to the returns webpage - https://www.partselect.com/365-Day-Returns.htm.
+        If you are unable to answer a query, politely say you do not know and reroute the user to the partsselect website - https://www.partselect.com/
 
         Question: {question} 
         Context: {context} 
