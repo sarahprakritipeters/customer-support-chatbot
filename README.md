@@ -15,6 +15,7 @@ This file is used to create CSV files of the popular fridge and dishwasher parts
 3. qna - Extracts FAQs related to popular fridge and dishwasher parts
 
 Issues I faced: 
+
     1. Extracting the parts that are replacements for the current product was difficult because the same tag was used in the HTML code
     2. Extracting model number for each query on a product page was difficult to store
 
